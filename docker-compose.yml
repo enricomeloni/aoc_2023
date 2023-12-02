@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  dev-env:
+    image: rust:latest
+    entrypoint: ["tail", "-f", "/dev/null"]
+    volumes: 
+      - ".:/aoc_2023"
