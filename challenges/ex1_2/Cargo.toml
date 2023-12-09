@@ -7,4 +7,3 @@ edition = "2021"
 
 [dependencies]
 utils = { path = "/aoc_2023/utils" }
-vec-tree = "0.1"
