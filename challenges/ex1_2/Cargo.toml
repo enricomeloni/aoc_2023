@@ -1,5 +1,5 @@
 [package]
-name = "ex1"
+name = "ex1_2"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,3 +7,4 @@ edition = "2021"
 
 [dependencies]
 utils = { path = "/aoc_2023/utils" }
+vec-tree = "0.1"
