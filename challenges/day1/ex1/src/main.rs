@@ -21,8 +21,7 @@ fn main() {
 fn get_calibration(line: &str) -> u32 {
 
     let digits: Vec<u32> = line.chars()
-        .filter(|character| character.is_ascii_digit())
-        .map(|character| character.to_digit(10).unwrap())
+        .filter_map(|character| character.to_digit(10))
         .collect();
 
     if let (Some(first_digit), Some(last_digit)) = (digits.first(), digits.last()) {    
