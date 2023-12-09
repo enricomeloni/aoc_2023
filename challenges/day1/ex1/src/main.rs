@@ -1,7 +1,7 @@
 use utils::{read_lines, get_input_path};
 
 fn main() {
-    let input_path = get_input_path(1, 1);
+    let input_path = get_input_path(1, Some("input.txt"));
 
     if let Ok(lines) = read_lines(&input_path) {
         let calibrations: Vec<u32> = lines
