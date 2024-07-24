@@ -155,7 +155,7 @@ fn extract_gear_numbers<'a>(
     if adjacents.len() == 2 {
         let gear_numbers: Option<(Number, Number)> = adjacents
             .into_iter()
-            .cloned()
+            .copied()
             .collect_tuple::<(Number, Number)>();
         return gear_numbers;
     } else {
@@ -166,11 +166,11 @@ fn extract_gear_numbers<'a>(
 fn find_gear_numbers(lines: &Vec<Line>) -> Vec<(Number, Number)> {
     let gear_symbols: Vec<(usize, Symbol)> = lines
         .iter()
-        .cloned()
         .enumerate()
         .flat_map(|(idx, line)| {
             line.symbols
-                .into_iter()
+                .iter()
+                .copied()
                 .filter_map(|symbol| {
                     if symbol.value == '*' {
                         return Some((idx, symbol));
